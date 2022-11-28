@@ -33,7 +33,7 @@ jobs:
     - name: Nexus IQ Policy Evaluation
       uses: sonatype-nexus-community/iq-github-action@master
       with:
-        serverUrl: ${{ secrets.iqserverurl }}
+        serverUrl: https://iq.pkiessling.eu.ngrok.io
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
         applicationId: 12
