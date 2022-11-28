@@ -34,8 +34,8 @@ jobs:
       uses: sonatype-nexus-community/iq-github-action@master
       with:
         serverUrl: https://iq.pkiessling.eu.ngrok.io
-        username: ${{ secrets.username }}
-        password: ${{ secrets.password }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
         applicationId: 12
         stage: Build
         target: ./target/  
