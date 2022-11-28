@@ -29,4 +29,14 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Nexus IQ Policy Evaluation
+      uses: sonatype-nexus-community/iq-github-action@master
+      with:
+        serverUrl: ${{ secrets.iqserverurl }}
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        applicationId: 12
+        stage: Build
+        target: ./target/  
 
